@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Claude Token Slide",
+  "version": "1.0",
+  "description": "Envia o uso do plano Claude para o widget desktop",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://claude.ai/*",
+    "http://localhost/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
