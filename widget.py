@@ -13,8 +13,8 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 # ── Config ───────────────────────────────────────────────────────────────────
 SERVER_PORT = 9847
 
-WINDOW_W = 300
-WINDOW_H = 90
+WINDOW_W = 296
+WINDOW_H = 89
 BG       = "#1a1714"
 BAR_BG   = "#2e2926"
 FG_MAIN  = "#f0e6d3"
@@ -116,7 +116,7 @@ class TokenWidget:
         self.lbl_title.pack(side="left", padx=10, pady=4)
 
         close = tk.Label(drag, text="×", bg=BG, fg=FG_DIM,
-                         font=("Segoe UI", 11, "bold"), cursor="hand2")
+                         font=("Segoe UI", 10, "bold"), cursor="hand2")
         close.pack(side="right", padx=8, pady=2)
         close.bind("<Button-1>", lambda e: self.root.destroy())
         close.bind("<Enter>",    lambda e: close.config(fg=COL_HIGH))
@@ -129,7 +129,7 @@ class TokenWidget:
         # % label
         self.lbl_pct = tk.Label(inner, text="—%  usado",
                                 bg=BG, fg=FG_MAIN,
-                                font=("Segoe UI", 18, "bold"))
+                                font=("Segoe UI", 17, "bold"))
         self.lbl_pct.pack(pady=(4, 0))
 
         # Progress bar
